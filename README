@@ -2,3 +2,6 @@ chronam-local is a simplistic example of how to create a local view of
 newspaper content in Chronicling America using just HTML, CSS and JavaScript
 and the Chronicling America API. The idea is that you could use this example
 to create your own view of National Digital Newspaper Program content.
+
+Author: Ed Summers <ehs@pobox.com>
+License: Public Domain
