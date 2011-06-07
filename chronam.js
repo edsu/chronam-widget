@@ -2,7 +2,7 @@ function search_pages() {
     var q = $("input:text[name=chronam_search_pages_q]").val()
     var url = 'http://chroniclingamerica.loc.gov/search/pages/results/?format=json&ortext=' + q;
     $.getJSON(url, chronam_search_pages_results);
-    var loading = '<img id="loading" src="loading.gif">';
+    var loading = $("<img>").attr({"id": "loading", "src": "loading.gif"});
     $("input[type=submit]").replaceWith(loading);
     return false;
 }
@@ -14,9 +14,9 @@ function chronam_search_pages_results(results) {
         var result = results[i];
         var url = "http://chroniclingamerica.loc.gov" + result.id;
         var thumb = url + "/thumbnail.jpg";
-        var img = '<img src="' + thumb + '">';
-        var span = $('<span class="chronam_page"><a href="' + url + '">' + img + '</a></span>');
-        hits.append(span);
+        var img = $("<img>").attr("src", thumb);
+        var hit = $("<a>").attr("href", url).append(img);
+        hits.append($("<span>").attr("class", "chronam_page").append(hit));
     }
     var search = '<input type="submit" value="search">';
     $("img[id=loading]").replaceWith(search);
