@@ -2,6 +2,8 @@ function search_pages() {
     var q = $("input:text[name=chronam_search_pages_q]").val()
     var url = 'http://chroniclingamerica.loc.gov/search/pages/results/?format=json&ortext=' + q;
     $.getJSON(url, chronam_search_pages_results);
+    var loading = '<img id="loading" src="loading.gif">';
+    $("input[type=submit]").replaceWith(loading);
     return false;
 }
 
@@ -16,6 +18,8 @@ function chronam_search_pages_results(results) {
         var span = $('<span class="chronam_page"><a href="' + url + '">' + img + '</a></span>');
         hits.append(span);
     }
+    var search = '<input type="submit" value="search">';
+    $("img[id=loading]").replaceWith(search);
 }
 
 function init_chronam_search_pages() {
@@ -26,6 +30,6 @@ function init_chronam_search_pages() {
                 <div id="chronam_search_pages_results"></div> \
                 ';
 
-    $("#chronam_search_pages").append(html);
+    $("#chronam_search_pages").prepend(html);
     $("#chronam_search_pages_form").submit(search_pages)
 }

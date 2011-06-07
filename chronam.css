@@ -4,12 +4,28 @@ body {
     margin-right: 10%;
 }
 
+#chronam_widget {
+    width: 250px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #eeeeee;
+}
+
 #chronam_search_pages_form {
     text-align: center;
+    font-size: smaller;
+    border-bottom: 3px solid #eeeeee;
     margin-bottom: 15px;
+    background-color: #eeeeee;
 }
 
 .chronam_page {
     margin: 10px;
     background-color: black;
 }
+
+#loading {
+    vertical-align: bottom;
+}
+
