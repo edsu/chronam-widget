@@ -1,7 +1,7 @@
 function search_pages() {
     var q = $("input:text[name=chronam_search_pages_q]").val()
     var url = 'http://chroniclingamerica.loc.gov/search/pages/results/?format=json&ortext=' + q;
-    $.ajax({url: url, success: chronam_search_pages_results});
+    $.getJSON(url, chronam_search_pages_results);
     return false;
 }
 
