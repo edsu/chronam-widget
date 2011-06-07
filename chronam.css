@@ -18,6 +18,9 @@ body {
     border-bottom: 3px solid #eeeeee;
     margin-bottom: 15px;
     background-color: #eeeeee;
+    width: 175px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .chronam_page {
@@ -27,5 +30,9 @@ body {
 
 #loading {
     vertical-align: bottom;
+}
+
+input[type=text] {
+    width: 100px;
 }
 

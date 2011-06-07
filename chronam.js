@@ -24,7 +24,7 @@ function chronam_search_pages_results(results) {
 
 function init_chronam_search_pages() {
     var html = '<form id="chronam_search_pages_form"> \
-                <input name="chronam_search_pages_q" type="text"> \
+                <input id="search_box" name="chronam_search_pages_q" type="text"> \
                 <input type="submit" value="search"> \
                 </form> \
                 <div id="chronam_search_pages_results"></div> \
