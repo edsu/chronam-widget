@@ -10,8 +10,8 @@ function search_pages() {
 function chronam_search_pages_results(results) {
     var hits = $("#chronam_search_pages_results");
     hits.empty();
-    for (i in results) { 
-        var result = results[i];
+    for (i in results.items) { 
+        var result = results.items[i];
         var url = "http://chroniclingamerica.loc.gov" + result.id;
         var thumb = url + "/thumbnail.jpg";
         var img = $("<img>").attr("src", thumb);
